@@ -1,0 +1,62 @@
+main{
+  background: #AA77FF;
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.register{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.register h2{
+  color: #C9EEFF;
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+.register form{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.register form input{
+  margin: 0.4rem auto;
+  width: 70%;
+  background: #62CDFF;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  color: black;
+}
+button{
+  margin: 10px auto;
+  padding: 10px;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  width: 50%;
+  max-width: 200px;
+  border:none;
+  border-radius: 5px;
+  background: #62CDFF;
+  cursor: pointer;
+}
+p{
+  text-align: center;
+  width: 80%;
+  margin: 15px auto 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+  color: #C9EEFF;
+}
+a:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
