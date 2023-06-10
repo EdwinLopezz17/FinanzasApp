@@ -1,0 +1,11 @@
+header{
+  background: #C9EEFF;
+  height: 75px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+header img{
+  height: 70px;
+  width: auto;
+}

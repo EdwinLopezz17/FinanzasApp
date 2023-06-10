@@ -1,0 +1,17 @@
+footer{
+  height: 50px;
+  width: 100%;
+  background: #C9EEFF;
+  margin-top: auto;
+}
+.icons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.icons img{
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
