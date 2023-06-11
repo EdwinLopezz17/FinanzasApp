@@ -16,6 +16,10 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
+import { CalculationComponent } from './components/calculation/calculation.component';
+import {MatRadioModule} from "@angular/material/radio";
+import {MatSelectModule} from "@angular/material/select";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import {MatIconModule} from "@angular/material/icon";
     FooterComponent,
     RegisterComponent,
     LoginComponent,
-    PropiedadesComponent
+    PropiedadesComponent,
+    CalculationComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +42,9 @@ import {MatIconModule} from "@angular/material/icon";
     MatPaginatorModule,
     MatTableModule,
     MatIconModule,
+    MatRadioModule,
+    MatSelectModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

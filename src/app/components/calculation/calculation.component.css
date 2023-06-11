@@ -1,0 +1,128 @@
+main{
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #AA77FF;
+}
+.content{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h3{
+  Color: black;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 20px;
+  background: #C9EEFF;
+  width: 70%;
+  border-radius: 5px;
+  padding: 5px;
+}
+.container{
+  background: #62CDFF;
+  width: 95%;
+}
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.info img{
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.info p{
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+form{
+  background: #C9EEFF;
+  padding: 10px;
+}
+.radio-group{
+  display: flex;
+  align-items: center;
+}
+.radio-group h2{
+  font-size: 1.4rem;
+  margin: auto 10px;
+  font-weight: normal;
+}
+.money{
+  background: #D9D9D9;
+  padding: 5px;
+  border-radius: 10px;
+}
+.money button{
+  width: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.money button.active {
+  background-color: #AA77FF;
+}
+.inputbox{
+  margin: 10px auto;
+
+}
+.inputbox label{
+  font-size: 1.3rem;
+  margin: 5px 10px;
+}
+.inputbox input, select {
+  background: #AA77FF;
+  width: auto;
+  min-width: 50px;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  margin: 0 5px;
+  padding: 5px;
+}
+option{
+  background: #C9EEFF;
+  font-size: 0.8rem;
+}
+
+
+.inputbox h4{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+.outputbox{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.outputbox label{
+  font-size: 1.3rem;
+}
+.outputbox p{
+  background: #62CDFF;
+  padding: 10px;
+  margin: auto 10px;
+  min-width: 100px;
+  width: auto;
+  border-radius:5px;
+  text-align: center;
+  font-size: 1rem;
+}
+button{
+  margin: 10px auto;
+}

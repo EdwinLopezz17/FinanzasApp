@@ -1,7 +1,7 @@
 header{
   background: #C9EEFF;
   height: 75px;
-  width: 100%;
+  width: 100vw;
   display: grid;
   place-items: center;
 }

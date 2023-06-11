@@ -11,7 +11,7 @@ main{
 }
 
 img{
-  width: 80px;
+  width: 65px;
   height: auto;
   margin-left: 10px;
 }
@@ -19,17 +19,20 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
   padding: 5px;
+  border:1px solid #C9EEFF;
+  border-radius: 5px;
+  width: 80%;
+  margin: 15px auto;
 }
 .name{
   text-align: end
 }
 .name h4{
-  margin: 5px 10px auto 0;
+  margin: 3px 10px 0;
   font-size: 1.1rem;
   color: #62CDFF;
-  font-weight: bold;
+  font-weight: 500;
 }
 h2{
   color: #C9EEFF;
