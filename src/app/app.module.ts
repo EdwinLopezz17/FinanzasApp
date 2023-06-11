@@ -20,6 +20,7 @@ import { CalculationComponent } from './components/calculation/calculation.compo
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSelectModule} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
+import { ListarPropiedadesComponent } from './components/listar-propiedades/listar-propiedades.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     RegisterComponent,
     LoginComponent,
     PropiedadesComponent,
-    CalculationComponent
+    CalculationComponent,
+    ListarPropiedadesComponent
   ],
   imports: [
     BrowserModule,
