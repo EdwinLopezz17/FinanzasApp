@@ -2,11 +2,11 @@
 <main>
   <app-header></app-header>
   <div class="content">
-    <h3>San Isidro</h3>
+    <h3>{{propiedad?.place}}</h3>
     <div class="container">
       <div class="info">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTALw4lzNMOb_suoWXsaDoFqnY5LhLpc1-NiQ&usqp=CAU" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <img *ngIf="propiedad" src="{{propiedad.photoUrl}}">
+        <p>{{propiedad?.description}}</p>
       </div>
       <form [formGroup]="form">
         <div class="radio-group">

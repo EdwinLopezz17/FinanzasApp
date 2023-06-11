@@ -71,6 +71,7 @@ form{
   margin: 0 5px;
   font-size: 0.9rem;
   cursor: pointer;
+  background: #808080;
 }
 .money button.active {
   background-color: #AA77FF;

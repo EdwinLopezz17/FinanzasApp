@@ -1,0 +1,102 @@
+main{
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #AA77FF;
+}
+.content{
+  flex:1;
+}
+
+img{
+  width: 65px;
+  height: auto;
+  margin-left: 10px;
+}
+.datas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border:1px solid #C9EEFF;
+  border-radius: 5px;
+  width: 80%;
+  margin: 15px auto;
+}
+.name{
+  text-align: end
+}
+.name h4{
+  margin: 3px 10px 0;
+  font-size: 1.1rem;
+  color: #62CDFF;
+  font-weight: 500;
+}
+h2{
+  color: #C9EEFF;
+  font-size: 2.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+.container{
+  background: #C9EEFF;
+  width: 95%;
+  padding: 20px 15px 20px ;
+  margin: 0 auto 10px;
+  border-radius: 5px;
+}
+.foto{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 3px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.foto:hover{
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: pulsate 0.5s infinite;
+}
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 5px #AA77FF;
+  }
+  50% {
+    box-shadow: 0 0 20px #62CDFF, 0 0 10px #C9EEFF;
+  }
+  100% {
+    box-shadow: 0 0 5px #AA77FF;
+  }
+}
+
+.filter{
+  width: 100%;
+}
+.filter input{
+  color: #62CDFF;
+}
+
+th{
+  color:#AA77FF;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+td{
+  color: #62CDFF;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+.ver{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+mat-paginator{
+  padding-bottom: 15px;
+}
