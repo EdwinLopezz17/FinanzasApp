@@ -26,8 +26,9 @@ export class CalculationComponent implements OnInit{
   plasoM:string[]=[
     'Meses','Años'
   ];
-  montoFinanciar = 0;
 
+  cambio:number=1;
+  montoFinanciar = 0;
   dollar:boolean=false;
   pen:boolean=true;
 
@@ -53,7 +54,7 @@ export class CalculationComponent implements OnInit{
 
     this.form.get('inicial')?.valueChanges.subscribe(inicial => {
       const price = this.propiedad?.price || 0;
-      this.montoFinanciar = price - (inicial || 0);
+      this.montoFinanciar = Number(price - (inicial || 0).toFixed(2));
     });
 
   }
@@ -63,21 +64,31 @@ export class CalculationComponent implements OnInit{
     this._route.params.subscribe(params=>{
       this.id = params['id'];
       this.propiedad = this._servProp.getById(this.id) || undefined;
-      this.montoFinanciar = this.propiedad?.price || 0;
+      this.montoFinanciar = (this.propiedad?.price || 0)*this.cambio;
     });
 
 
   }
 
   selectDollar() {
-    this.dollar = true;
-    this.pen = false;
+    if(!this.dollar) {
+      this.dollar = true;
+      this.pen = false;
+      this.cambio = 1 / (3.78);
+      this.cambios();
+    }
   }
 
   selectPen() {
-    this.dollar = false;
-    this.pen = true;
+    if(!this.pen) {
+      this.dollar = false;
+      this.pen = true;
+      this.cambio = 3.78;
+      this.cambios();
+    }
   }
 
-
+  cambios() {
+      this.montoFinanciar = Number((this.montoFinanciar * this.cambio).toFixed(2));
+  }
 }
