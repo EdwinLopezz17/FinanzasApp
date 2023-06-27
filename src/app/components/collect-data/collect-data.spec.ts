@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalculationComponent } from './calculation.component';
+import { CollectData } from './collect-data';
 
 describe('CalculationComponent', () => {
-  let component: CalculationComponent;
-  let fixture: ComponentFixture<CalculationComponent>;
+  let component: CollectData;
+  let fixture: ComponentFixture<CollectData>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CalculationComponent]
+      declarations: [CollectData]
     });
-    fixture = TestBed.createComponent(CalculationComponent);
+    fixture = TestBed.createComponent(CollectData);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -16,11 +16,16 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
-import { CalculationComponent } from './components/calculation/calculation.component';
+import { CollectData } from './components/collect-data/collect-data';
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSelectModule} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
 import { ListarPropiedadesComponent } from './components/listar-propiedades/listar-propiedades.component';
+import { RegistrarClienteComponent } from './components/registrar-cliente/registrar-cliente.component';
+import {HttpClientModule} from "@angular/common/http";
+import { SeeCreditsComponent } from './components/see-credits/see-credits.component';
+import { SeeCreditComponent } from './components/see-credit/see-credit.component';
+import { ListCreditsComponent } from './components/list-credits/list-credits.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +36,12 @@ import { ListarPropiedadesComponent } from './components/listar-propiedades/list
     RegisterComponent,
     LoginComponent,
     PropiedadesComponent,
-    CalculationComponent,
-    ListarPropiedadesComponent
+    CollectData,
+    ListarPropiedadesComponent,
+    RegistrarClienteComponent,
+    SeeCreditsComponent,
+    SeeCreditComponent,
+    ListCreditsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +55,8 @@ import { ListarPropiedadesComponent } from './components/listar-propiedades/list
     MatIconModule,
     MatRadioModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
   ],
   providers: [],

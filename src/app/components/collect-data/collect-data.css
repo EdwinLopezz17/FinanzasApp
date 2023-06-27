@@ -1,38 +1,50 @@
 main{
-  height: 100%;
-  max-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #AA77FF;
+  background: #C9EEFF;
 }
 .content{
   flex:1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 80%;
 }
 
 .content h3{
   Color: black;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
   margin-top: 20px;
   background: #C9EEFF;
   width: 70%;
+  max-width: 400px;
   border-radius: 5px;
   padding: 5px;
 }
+
+
 .container{
-  background: #62CDFF;
+  background: cadetblue;
   width: 95%;
+  padding: 10px;
+  padding-bottom: 100px;
 }
 .info{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+h4{
+  margin-left: 15px;
+  font-size: 1.6rem;
+
 }
 .info img{
   width: 140px;
@@ -41,13 +53,20 @@ main{
   border-radius: 5px;
 }
 .info p{
-  margin-left: 10px;
+  text-align: center;
+  margin: 0 10px;
   font-size: 1rem;
 }
 
 form{
   background: #C9EEFF;
   padding: 10px;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+
 }
 .radio-group{
   display: flex;
@@ -60,12 +79,13 @@ form{
 }
 .money{
   background: #D9D9D9;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
+
 }
 .money button{
   width: 50px;
-  border-radius: 10px;
+  border-radius: 3px;
   border: none;
   padding: 5px;
   margin: 0 5px;
@@ -74,10 +94,11 @@ form{
   background: #808080;
 }
 .money button.active {
-  background-color: #AA77FF;
+  background-color: cadetblue;
+  transform: scale(1.2);
 }
 .inputbox{
-  margin: 10px auto;
+  padding: 10px;
 
 }
 .inputbox label{
@@ -85,17 +106,17 @@ form{
   margin: 5px 10px;
 }
 .inputbox input, select {
-  background: #AA77FF;
+  background: #808080;
   width: auto;
   min-width: 50px;
   border: none;
-  border-radius: 5px;
   height: 30px;
-  margin: 0 5px;
-  padding: 5px;
+  margin: 5px 5px 0;
+  padding: 5px 10px;
+  border-radius: 2px;
 }
 option{
-  background: #C9EEFF;
+  background: cadetblue;
   font-size: 0.8rem;
 }
 
@@ -115,7 +136,7 @@ option{
   font-size: 1.3rem;
 }
 .outputbox p{
-  background: #62CDFF;
+  background: cadetblue;
   padding: 10px;
   margin: auto 10px;
   min-width: 100px;
@@ -126,4 +147,48 @@ option{
 }
 button{
   margin: 10px auto;
+  width: 200px;
+}
+button:hover{
+  border: 1px solid black;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#volver{
+  margin-top: 0;
+}
+.actions{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: cadetblue;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.formulario-container h3{
+  text-align: center;
+  margin: 20px auto;
+  background: none;
+  font-weight: bold;
+}
+
+.formulario-container form{
+  width: 80%;
+  max-width: 500px;
+  opacity: 1;
+  background: #808080;
+  display: flex;
+  justify-content: end;
+}
+.formulario-container input{
+  background: #C9EEFF;
 }

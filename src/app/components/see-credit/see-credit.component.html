@@ -1,0 +1,41 @@
+<main *ngIf="client">
+
+  <app-header></app-header>
+  <h3>Plan de pagos de  <span>{{client.name}} {{client.lastname}}</span></h3>
+
+  <table>
+    <thead>
+    <tr>
+      <th>#Cuota</th>
+      <th>TEP</th>
+      <th>Gracia</th>
+      <th>I Balance</th>
+      <th>Interes</th>
+      <th>Fee</th>
+      <th>Amortizacion</th>
+      <th>SD</th>
+      <th>Str</th>
+      <th>F Balance</th>
+      <th>Flujo</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let flow of listFlows">
+      <td>{{flow.number}}</td>
+      <td>{{flow.tep !== undefined ? flow.tep.toFixed(2) : ''}}</td>
+      <td>{{flow.gracePeriod}}</td>
+      <td>{{flow.initialBalance !== undefined ? flow.initialBalance.toFixed(2) : ''}}</td>
+      <td>{{flow.interest !== undefined ? flow.interest.toFixed(2) : ''}}</td>
+      <td>{{flow.fee !== undefined ? flow.fee.toFixed(2) : ''}}</td>
+      <td>{{flow.amortization !== undefined ? flow.amortization.toFixed(2) : ''}}</td>
+      <td>{{flow.sd !== undefined ? flow.sd.toFixed(2) : ''}}</td>
+      <td>{{flow.str !== undefined ? flow.str.toFixed(2) : ''}}</td>
+      <td>{{flow.finalBalance !== undefined ? flow.finalBalance.toFixed(2) : ''}}</td>
+      <td>{{flow.flow !== undefined ? flow.flow.toFixed(2) : ''}}</td>
+    </tr>
+    </tbody>
+  </table>
+<app-footer></app-footer>
+</main>
+

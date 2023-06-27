@@ -1,0 +1,111 @@
+
+<main *ngIf="property">
+  <app-header></app-header>
+  <div class="content">
+    <h3>{{property.location}}</h3>
+    <div class="container">
+      <div class="info">
+        <img src="{{property.photo}}">
+        <p>{{property.description}}</p>
+        <h4>{{property.price}}</h4>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="calcular()">
+        <div class="radio-group">
+          <h2>Moneda </h2>
+          <div class="money">
+            <button [ngClass]="{'active': dollar}" (click)="selectDollar()" type="button">$</button>
+            <button [ngClass]="{'active': pen}" (click)="selectPen()"  type="button">PEN</button>
+          </div>
+        </div>
+
+        <div class="inputbox">
+          <label>Tasa</label>
+          <select formControlName="tasaType">
+            <option *ngFor="let val of tasa" [value]="val">
+              {{val}}
+            </option>
+          </select>
+          <select formControlName="tasaPlaso">
+            <option *ngFor="let val of plaso" [value]="val">
+              {{val}}
+            </option>
+          </select>
+          <select *ngIf="form.controls['tasaType'].value === 'TN'" formControlName="capitalizacionSelec">
+            <option value="" disabled selected>Capitaliza</option>
+            <option *ngFor="let val of capitaliza" [value]="val">
+              {{val}}
+            </option>
+          </select>
+            <input type="number" formControlName="tasaValue" placeholder="8 %" style="width: 80px">
+          <span style="color: #808080; font-size: 1.3rem; font-weight: bold">%</span>
+        </div>
+
+        <div class="inputbox">
+          <label>COK Anual</label>
+          <input type="number" formControlName="cok" style="width: 70px; margin-bottom: 10px">
+          <span style="color: #808080; font-size: 1.3rem; font-weight: bold">%</span>
+          <label>Inicial</label>
+          <input type="number" formControlName="inicial" style="width: 80px">
+          <span style="color: #808080; font-size: 1.3rem; font-weight: bold">%</span>
+        </div>
+
+        <div class="inputbox" style="margin-bottom: 20px">
+          <label>Periodo Gracia Total</label>
+          <input type="number" placeholder="Tiempo" formControlName="tiempoGT" style="width: 80px">
+
+        </div>
+        <div class="inputbox" style="margin-bottom: 20px">
+          <label>Periodo Gracia Parcial</label>
+          <input type="number" placeholder="Tiempo" formControlName="tiempoGP" style="width: 80px">
+
+        </div>
+        <div class="inputbox" style="margin-bottom: 20px">
+
+          <label>Plazo Años</label>
+          <input type="number" formControlName="plasoAnio" style="width: 100px">
+
+        </div>
+
+
+        <div class="inputbox">
+          <label>Frecuencia de pago (dias)</label>
+          <input type="number" formControlName="frecPago" style="width: 100px">
+        </div>
+
+        <div class="outputbox">
+          <label>Monto a financiar: </label>
+          <p>{{montoFinanciar}}</p>
+        </div>
+        <div class="actions">
+          <button type="submit">Continuar</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="formulario-container" *ngIf="datasClient">
+      <form [formGroup]="formClient" (ngSubmit)="addClient()">
+        <h3>Datos del cliente</h3>
+        <div class="inputbox">
+          <label>Nombre</label>
+          <input type="text" placeholder="Ex. Juan" formControlName="name">
+        </div>
+        <div class="inputbox">
+          <label>Apellido</label>
+          <input type="text" placeholder="Ex. Lopez" formControlName="lastName">
+        </div>
+        <div class="inputbox">
+          <label>DNI</label>
+          <input type="number" placeholder="76159142"  formControlName="dni">
+        </div>
+        <button type="submit">Registrar Cliente</button>
+        <button type="button" (click)="datasClientTofalse()">Cancelar</button>
+      </form>
+    </div>
+
+
+  </div>
+
+  <app-footer></app-footer>
+</main>
+
+

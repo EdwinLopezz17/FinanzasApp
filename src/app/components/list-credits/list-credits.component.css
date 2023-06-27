@@ -1,0 +1,44 @@
+
+main{
+  min-height: 100vh;
+}
+h4{
+  text-align: center;
+  margin: 30px auto 20px;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+span{
+  font-size: 2rem;
+  color: #62CDFF;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e5e5e5;
+  cursor: pointer;
+}

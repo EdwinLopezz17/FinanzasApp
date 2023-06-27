@@ -2,7 +2,7 @@ footer{
   height: 50px;
   width: 100vw;
   background: #C9EEFF;
-  margin-top: auto;
+  margin: 20px auto 0;
 }
 .icons{
   display: flex;

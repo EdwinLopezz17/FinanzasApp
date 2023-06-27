@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ export class RegisterComponent {
 
   form:FormGroup;
   constructor(private _formB:FormBuilder,
-              public _router:Router,) {
+              public _router:Router,
+              private _userServ:UserService) {
 
     this.form = this._formB.group({
       name: ['', Validators.required],
@@ -24,10 +26,16 @@ export class RegisterComponent {
 
   addUser(){
 
-    this._router.navigate(['/login']);
-
     if (this.form.valid) {
-      this._router.navigate(['/login']);
+
+        this._userServ.addUser(this.form.value).subscribe({
+          next:(val:any)=>{
+            alert("Usuario agregado correctamente")
+
+            this._router.navigate(['/login']);
+          }
+        })
+
     } else {
       alert('Formulario inválido. Por favor, revisa los campos.');
     }

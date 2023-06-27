@@ -1,0 +1,32 @@
+<main *ngIf="credits">
+  <app-header></app-header>
+  <h4>Historial Completo de todos lo creditos</h4>
+  <h4>otorgados por <span>MonoLine</span></h4>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Monto</th>
+      <th>Inicial</th>
+      <th>TEA</th>
+      <th>Gracia Parcial</th>
+      <th>Gracia Total</th>
+      <th>Años</th>
+      <th>Frecuencia de pago</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let credit of credits" [routerLink]="['/seecredits', credit.id]">
+      <td>{{ clientNames[credit.client_dni] }}</td>
+      <td>{{ propertyPrices[credit.idProperty] }}</td>
+      <td>{{ credit.initialFee }}</td>
+      <td>{{ credit.interestRate * 100.00}}%</td>
+      <td>{{credit.partialGracePeriod}}</td>
+      <td>{{credit.fullGracePeriod}}</td>
+      <td>{{ credit.numberOfYears }}</td>
+      <td>{{credit.paymentFrequency}} Dias</td>
+    </tr>
+    </tbody>
+  </table>
+</main>

@@ -37,6 +37,7 @@ form{
 form input{
   margin: 0.7rem auto;
   width: 70%;
+  max-width: 450px;
   background: #62CDFF;
   border: none;
   padding: 10px;
