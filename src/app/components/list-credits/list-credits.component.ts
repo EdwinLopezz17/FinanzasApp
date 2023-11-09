@@ -41,7 +41,7 @@ export class ListCreditsComponent implements OnInit {
             },
           });
         });
-
+        //this._propertyServ.getById(credit.idProperty).subscribe({
       },
     });
   }
